@@ -1,0 +1,38 @@
+Perceptron Algorithm:
+For a point with coordinates (p,q) , label y, and prediction given by the equation 
+​y-hat​​ =step(w​1​​.x​1​​ + w​2.​​x​2​​ +b)
+
+If the point is correctly classified, do nothing.
+If the point is classified positive, but it has a negative label, subtract αp,αq, and α from w​1, w​2, and b respectively.
+If the point is classified negative, but it has a positive label, add αp,αq, and α to w​1, w​2, and b respectively.
+
+Error functions should be: (for gradient descent)
+	continuous
+	differenctiable
+
+Changeing activation functions from discrete to continuous functions:
+
+	Ref figures
+
+Softmax Function
+	Linear Func scores: z1, z2, .. zn
+	P(class i) = e^zi/(e^z1 + e^z2 + ... + e^zn)
+
+Cross Entropy calculation:
+	1. Calc probablities of data points
+	2. Take log of P(data points)
+	3. Add the negatives of log of P(data points)
+	4. The sum gives the cross entropy
+Note: Since log of number between 0 and 1 is always negative, addition of log of values nearing 0 is a larger negative number
+Hence, cross entropy is always larger for a bad model.
+
+
+
+
+	./8.15.251.55:1935
+
+	30055
+
+
+
+	rtmpdump -v -r "rtmp://8.15.251.55:1935/rtplive/30055" | vlc -
